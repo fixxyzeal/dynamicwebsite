@@ -1,0 +1,36 @@
+{
+    "main": {
+        "makeappointment": "Make Appointment",
+        "covidhead": "Covid-19 Test",
+        "annualhead": "Annual Health Checkup",
+        "other": "Other Test Package",
+        "std": "Sexually Transmitted Disease",
+        "food": "Allergy Test",
+        "vitamin": "Vitamin, Mineral & Nutritron Test",
+        "hormone": "Hormone Test",
+        "cancer": "Cancer Screening Test",
+        "liver": "Liver & Kidney Test",
+        "diabetes": "Diabetes Test",
+        "metal": "Toxic Metal Profile"
+    },
+    "appointment": {
+        "head": "Make Appointment",
+        "detail": "Please input appointment form follow this link --->"
+    },
+    "contactus": {
+        "head": "Contact",
+        "detail": "Welcome to M.T. Inter Medical Laboratory Pattaya M.T. Inter Lab is the largest private medical laboratory testing company in Pattya City, providing diagnostic laboratory services, pathological and clinical tests for medical communities in Pattaya City,Thailand. The company offers a portfolio of over than 1,200 clinical analysis in the areas of immunology, hematology/coagulation, clinical chemistry, parasitology, microbiology/infectious diseases, toxicology, cytology, surgical pathology, flowcytometry, molecular biology and cytogenetics. Hour of Operation",
+        "phone": "TEL Customer service: ",
+        "email": "Email: ",
+        "address": "193/421 Pattaya 3 Road, (Lido Hotel) near Tony’s fitness Gym Moo.10 Nongprue, Banglamung Chonburi 20150",
+        "openhour": "Opening Hours : Mon-Sat 08.00 AM - 06.00 PM",
+        "close": "Close on Sunday"
+    },
+    "menu": {
+        "aboutus": "Home Page",
+        "package": "Package",
+        "appointment": "Make Appointment",
+        "contact": "Contact",
+        "facebook": "FaceBook Page"
+    }
+}
