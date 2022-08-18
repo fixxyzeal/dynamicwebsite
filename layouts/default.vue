@@ -1,20 +1,8 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
+  <v-app light>
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -24,33 +12,15 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-      color="primary"
-      :class="textwhite"
-    >
+    <v-app-bar :clipped-left="clipped" fixed app color="primary" :class="textwhite">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" :class="textwhite" />
 
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn
-        icon
-        color="purple lighten-5"
-        href="https://www.facebook.com/MTinterLabClinic"
-        target="_blank"
-      >
-        <v-icon>mdi-facebook</v-icon>
+      <v-btn v-for="(button,i) in navbuttons" :key="i" :class="button.color" :href="button.link" icon target="_blank">
+        <v-icon>{{button.icon}}</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        color="purple lighten-5"
-        href="https://www.instagram.com/m.t.inter.lab_official/"
-        target="_blank"
-      >
-        <v-icon>mdi-instagram</v-icon>
-      </v-btn>
+
       <v-menu offset-y>
         <template v-slot:activator="{ on: menu, attrs }">
           <v-btn large color="primary" dark v-bind="attrs" v-on="{ ...menu }">
@@ -58,12 +28,8 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item
-            v-for="item in availableLocales"
-            :key="item.code"
-            :to="switchLocalePath(item.code)"
-          >
-            <v-list-item-title>{{ item.code.toUpperCase() }}</v-list-item-title>
+          <v-list-item v-for="item in availableLocales" :key="item.code" :to="switchLocalePath(item.code)">
+            <v-list-item-title class="text-center">{{ item.code.toUpperCase() }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -99,6 +65,10 @@ export default {
           title: 'Inspire',
           to: '/inspire',
         },
+      ],
+      navbuttons:[
+        { icon: 'mdi-facebook', link: 'https://www.facebook.com/MTinterLabClinic', color:'white--text'},
+        { icon: 'mdi-instagram', link: 'https://www.instagram.com/m.t.inter.lab_official', color:'white--text' },
       ],
       miniVariant: false,
       right: false,
@@ -167,3 +137,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.v-application {
+  background-color: #e8e8e8;
+}
+</style>
